@@ -1,3 +1,17 @@
-<h1>
-  {{title}}
-</h1>
+<div class="form">
+  <h1>
+    {{title}}
+  </h1>
+
+  <label>Node name: </label>
+  <input #nodeName value="a" />
+  <button (click)="add(nodeName.value)">Add Root Node</button>
+  <button (click)="arr_log()">Array log</button>
+
+</div>
+
+<div class="tree">
+  <ul>
+    <node-detail *ngFor="let node of rootNodes" [node]="node"></node-detail>
+  </ul>
+</div>

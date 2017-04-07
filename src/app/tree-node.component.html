@@ -1,0 +1,6 @@
+<span>{{label}}</span>
+<button class="add-btn" (click)="add(node.sub_nodes, node.offset, node.name)"></button>
+
+<ul>
+    <node-detail *ngFor="let node of node.sub_nodes" [node]="node"></node-detail>
+</ul>
